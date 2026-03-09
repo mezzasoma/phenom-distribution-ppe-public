@@ -22,6 +22,7 @@ This repository contains the scripts and environment setup used to perform the p
     python create_psd.py
     python create_injection.py
     python create_prior.py
+    python create_configuration.py
     ```
 6. Start parameter estimation with `bilby` using the launch script. For example:
     ```
