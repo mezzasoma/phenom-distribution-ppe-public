@@ -3,7 +3,9 @@
 This repository contains the scripts and environment setup used to perform the parameter estimation for "Impact of numerical-relativity waveform calibration on parametrized post-Einsteinian tests".
 
 ## Quick start
-1. Clone this repository both on the cluster and on laptop. It is meant to be run independently from both locations.
+1. Clone this repository on both the cluster and your laptop. It is designed to run independently in each location:
+   - Laptop: intended for file generation, code development, and postprocessing (Jupyter notebook is available too, using the IPython kernel created during installation).
+   - Cluster: intended for running the parameter-estimation jobs across multiple nodes (SLURM scheduler is required).
 2. Populate `config_example.yaml` and rename it to `config.yaml`.
 3. From within the repository `phenom-distribution-ppe-public`, create the conda environment by running
     ```
@@ -29,4 +31,10 @@ This repository contains the scripts and environment setup used to perform the p
     ```
     bash ../../../scripts/bilby-inference/launch_parallel_bilby.sh --help
     ```
-    
+7. To generate corner plots, use
+    ```
+    python postprocess_bilby_run.py
+    ```
+## Requirements
+- Laptop: Anaconda 2024.06
+- Cluster: Anaconda 2024.06, SLURM 25.05.5, Open MPI v5.0.1

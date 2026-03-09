@@ -15,3 +15,5 @@ __pycache__/
 outdir/
 out/
 config.yaml
+configuration/*
+!configuration/*no-slurm-extra-lines.ini

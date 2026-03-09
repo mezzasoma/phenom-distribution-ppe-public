@@ -13,38 +13,39 @@ def create_and_set_outdir(subfolder_name):
     os.makedirs(outdir, exist_ok=True)
     return outdir
 
-def get_path_to_repo_on_cluster():
+def get_path_to_config_file():
     repo_root = Path(__file__).resolve().parent.parent.parent.parent.parent
-    cfg_path = repo_root / "config.yaml"
+    cfg_path = str(repo_root / "config.yaml")
+    return cfg_path
 
-    with cfg_path.open("r") as f:
+def get_path_to_repo_on_cluster():
+    cfg_path = get_path_to_config_file()
+
+    with Path(cfg_path).open("r") as f:
         config = yaml.safe_load(f) or {}
 
     return config["path_to_repo_on_cluster"]
 
 def get_path_to_flowmc_gaussian_prior_on_laptop():
-    repo_root = Path(__file__).resolve().parent.parent.parent.parent.parent
-    cfg_path = repo_root / "config.yaml"
+    cfg_path = get_path_to_config_file()
 
-    with cfg_path.open("r") as f:
+    with Path(cfg_path).open("r") as f:
         config = yaml.safe_load(f) or {}
 
     return config["path_to_flowmc_gaussian_prior_on_laptop"]
 
 def get_path_to_flowmc_delta_prior_on_laptop():
-    repo_root = Path(__file__).resolve().parent.parent.parent.parent.parent
-    cfg_path = repo_root / "config.yaml"
+    cfg_path = get_path_to_config_file()
 
-    with cfg_path.open("r") as f:
+    with Path(cfg_path).open("r") as f:
         config = yaml.safe_load(f) or {}
 
     return config["path_to_flowmc_delta_prior_on_laptop"]
 
 def get_path_to_bilby_runs_on_laptop():
-    repo_root = Path(__file__).resolve().parent.parent.parent.parent.parent
-    cfg_path = repo_root / "config.yaml"
+    cfg_path = get_path_to_config_file()
 
-    with cfg_path.open("r") as f:
+    with Path(cfg_path).open("r") as f:
         config = yaml.safe_load(f) or {}
 
     return config["path_to_bilby_runs_on_laptop"]
