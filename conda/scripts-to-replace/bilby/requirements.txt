@@ -1,0 +1,17 @@
+###############################################
+### Source repository: https://github.com/bilby-dev/bilby
+### Original file path: bilby/requirements.txt
+###############################################
+
+# bilby.cython>=0.3.0
+# dynesty>=2.0.1
+# emcee
+# corner
+# numpy
+# matplotlib<3.8.0
+# scipy>=1.5
+# pandas
+# dill
+# tqdm
+# h5py
+# attrs

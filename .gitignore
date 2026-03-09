@@ -1,0 +1,17 @@
+.ipynb_checkpoints/
+__pycache__/
+.vscode/
+*.mp4
+*.log
+*.npz
+*.sif
+*.out
+*.err
+*.pkl
+*.png
+*.gif
+*.pdf
+*.inj
+outdir/
+out/
+config.yaml

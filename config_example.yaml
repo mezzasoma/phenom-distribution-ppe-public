@@ -1,0 +1,10 @@
+###############################################
+# Configuration file
+# Populate the paths below (examples shown)
+# Then rename this file to: config.yaml
+# The file will be ignored by git.
+###############################################
+
+path_to_repo_on_cluster: "/home/username_on_cluster/phenom-distribution-ppe-public"
+path_to_bilby_runs_on_laptop: "/home/username_on_laptop/bilby_runs_folder"
+path_to_flowmc_gaussian_prior_on_laptop: "this can be left empty for the moment"
